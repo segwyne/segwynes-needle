@@ -33,6 +33,18 @@ Version: 1.0
     7.2 Small desktop > 992px
     7.3 Large desktop > 1200px
 */
+/*--------------------------------------------------------------
+  _____     __           
+ / ___/__  / /__  _______
+/ /__/ _ \/ / _ \/ __(_-<
+\___/\___/_/\___/_/ /___/
+
+    1.0 Colors
+--------------------------------------------------------------*/
+/*
+d76bc1 is pink background
+9649af is purple accent color
+*/
 
 /*--------------------------------------------------------------
    ___              
@@ -42,6 +54,7 @@ Version: 1.0
                     
 2.0 Base
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 2.1 Alignments
 --------------------------------------------------------------*/
@@ -74,34 +87,28 @@ Version: 1.0
 --------------------------------------------------------------*/
 
 header {
-	background-image: url("files/strip-of-lace.jpg");
+	background-color: #d76bc1;
 	text-align: center;
-	height: 150px;
-	color: black;
+    height: 75px;
 	}
 
 /*--------------------------------------------------------------
     3.2 Navigation
 --------------------------------------------------------------*/
 nav ul {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} 
-
-nav ul {
-	margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #9649af;
 	}
 nav ul li {
-    font-size: 20px;
-    padding: 10px;  
-/*    height: 40px;  */
-    border: 1px solid red;
-}
-
-.active {
-    text-decoration:underline overline;
-	}
+    font-size: 16px;
+    padding: 5px 30px;  
+    text-align: center
+    }
+nav ul li a {
+    color: white;
+    }
 
 /*--------------------------------------------------------------
     3.3 Splash Page
@@ -111,9 +118,6 @@ nav ul li {
     3.4 Content
 --------------------------------------------------------------*/
 
-.content {
-    background-image: url("files/main-bg.jpg");
-	}
 
 /*--------------------------------------------------------------
     3.5 Pages
@@ -161,7 +165,6 @@ nav ul li {
 
 .menu li a{
     text-decoration: none;
-    color: black;
     }
 
 /*--------------------------------------------------------------
@@ -179,10 +182,18 @@ nav ul li {
 --------------------------------------------------------------*/
 h1 {
     font-family: 'Cinzel', Serif;
-    font-size: 50px;
-    color: white;
+    font-size: 30px;
 	}
+header h1, header p {
+    margin: 0;
+    color: white;
+    }
+header p {
+    display: none;
+    font-family: 'Parisienne', cursive;
+    font-size: 30px;
 
+    }
 /*--------------------------------------------------------------
    __  ___       ___     
   /  |/  /__ ___/ (_)__ _
@@ -208,7 +219,15 @@ h1 {
     7.2 Small desktop > 992px
 --------------------------------------------------------------*/
 @media only screen and (min-width: 722px) {
-
+header {
+    height: 125px;
+    }
+header p{
+    display: inline;
+    }
+h1 {
+    font-size: 60px;
+    }
 nav ul {
     display: flex;
     flex-direction: row;
