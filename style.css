@@ -54,7 +54,9 @@ d76bc1 is pink background
                     
 2.0 Base
 --------------------------------------------------------------*/
-
+body {
+    margin:0;
+}
 /*--------------------------------------------------------------
 2.1 Alignments
 --------------------------------------------------------------*/
@@ -95,8 +97,15 @@ header {
 /*--------------------------------------------------------------
     3.2 Navigation
 --------------------------------------------------------------*/
+#toggle-menu {
+    display: block;
+    background-color: #9649af;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
 nav ul {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     background-color: #9649af;
@@ -104,11 +113,24 @@ nav ul {
 nav ul li {
     font-size: 16px;
     padding: 5px 30px;  
-    text-align: center
+    text-align: center;
+    color: white;
     }
 nav ul li a {
     color: white;
     }
+/* Hides the menu by default */
+#main-menu {
+    display: none;
+}
+/* Turns the menu on */
+#tm:checked + #main-menu {
+    display: flex;
+}
+
+#menu input[type="checkbox"], #menu ul span.drop-icon {
+    display: none;
+}
 
 /*--------------------------------------------------------------
     3.3 Splash Page
@@ -117,7 +139,10 @@ nav ul li a {
 /*--------------------------------------------------------------
     3.4 Content
 --------------------------------------------------------------*/
-
+#content {
+    padding: 10px;
+    text-align: center;
+    }
 
 /*--------------------------------------------------------------
     3.5 Pages
@@ -130,7 +155,24 @@ nav ul li a {
 /*--------------------------------------------------------------
     3.7 Footer
 --------------------------------------------------------------*/
-
+footer {
+	position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px);
+    background-color: #9649af;
+	text-align: center;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+	}
+footer > div {
+    width: 100%;
+    padding: 5px 0;
+}
+footer a {
+    color: white;
+    }
 /*--------------------------------------------------------------
    __  ___        __     __   
   /  |/  /__  ___/ /_ __/ /__ 
@@ -192,8 +234,8 @@ header p {
     display: none;
     font-family: 'Parisienne', cursive;
     font-size: 30px;
-
     }
+
 /*--------------------------------------------------------------
    __  ___       ___     
   /  |/  /__ ___/ (_)__ _
@@ -214,25 +256,41 @@ header p {
 /*--------------------------------------------------------------
    7.1 Tablets > 768px
 --------------------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+    #menu #main-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #toggle-menu, 
+    #menu label.drop-icon {
+        display: none;
+    }
+    header p {
+        display: inline;
+    }
+    header {
+        height: 90px;
+    }
+    footer {
+        flex-direction: row;
+    }
+    footer > div {
+        width: 50%;
+    }
+}
 
 /*--------------------------------------------------------------
     7.2 Small desktop > 992px
 --------------------------------------------------------------*/
-@media only screen and (min-width: 722px) {
-header {
-    height: 125px;
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 60px;
     }
-header p{
-    display: inline;
+    header {
+        height: 125px;
     }
-h1 {
-    font-size: 60px;
-    }
-nav ul {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    }
+  
 }
 
 /*--------------------------------------------------------------
