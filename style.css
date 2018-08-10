@@ -139,7 +139,13 @@ nav ul li a {
 /*--------------------------------------------------------------
     3.4 Content
 --------------------------------------------------------------*/
+body {
+    background-color: #eee;
+    }
 #content {
+    padding-bottom: 100px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
+}
+#article {
     padding: 10px;
     text-align: center;
     }
@@ -156,7 +162,7 @@ nav ul li a {
     3.7 Footer
 --------------------------------------------------------------*/
 footer {
-	position: absolute;
+	position: fixed; /* Keeps footer at bottom of the page, regardless of height of content */
     bottom: 0;
     width: calc(100% - 20px);
     background-color: #9649af;
@@ -226,12 +232,15 @@ h1 {
     font-family: 'Cinzel', Serif;
     font-size: 30px;
 	}
-header h1, header p {
+#banner {
     margin: 0;
     color: white;
+    font-size: 30px;
     }
-header p {
+#byline {
     display: none;
+    margin: 0;
+    color: white;
     font-family: 'Parisienne', cursive;
     font-size: 30px;
     }
@@ -266,7 +275,7 @@ header p {
     #menu label.drop-icon {
         display: none;
     }
-    header p {
+    #byline {
         display: inline;
     }
     header {
@@ -284,16 +293,29 @@ header p {
     7.2 Small desktop > 992px
 --------------------------------------------------------------*/
 @media only screen and (min-width: 992px) {
-    h1 {
+    #banner {
         font-size: 60px;
     }
     header {
         height: 125px;
     }
-  
+    #article {
+        width: 80%;
+        margin: auto;  
 }
 
 /*--------------------------------------------------------------
     7.3 Large desktop > 1200px
 --------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+    #banner {
+        font-size: 60px;
+    }
+    header {
+        height: 125px;
+    }
+    #article {
+        width: 60%;
+        margin: auto;  
+}
 
