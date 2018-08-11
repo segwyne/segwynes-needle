@@ -1,0 +1,8 @@
+[10-Aug-2018 16:07:38 America/New_York] PHP Fatal error:  Call to undefined function test_input() in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 12
+[10-Aug-2018 16:07:44 America/New_York] PHP Fatal error:  Call to undefined function test_input() in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 12
+[10-Aug-2018 16:09:09 America/New_York] PHP Fatal error:  Call to undefined function test_input() in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 12
+[10-Aug-2018 16:18:17 America/New_York] PHP Notice:  Undefined variable: headers in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 48
+[10-Aug-2018 16:28:33 America/New_York] PHP Notice:  Undefined variable: headers in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 47
+[10-Aug-2018 16:46:19 America/New_York] PHP Notice:  Undefined index: message in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 19
+[10-Aug-2018 16:48:21 America/New_York] PHP Notice:  Undefined index: message in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 19
+[10-Aug-2018 16:52:39 America/New_York] PHP Notice:  Undefined index: message in /home/slowseda/segwynesneedle.com/contact-thanks.php on line 9

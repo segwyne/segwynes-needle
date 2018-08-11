@@ -16,29 +16,13 @@
     <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
     <input type="checkbox" id="tm" style="border: 1px solid red">
     <ul class="menu" id="main-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pricelist.html">Price List</a></li>
-        <li><a href="showcase.html">Showcase</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="pricelist.php">Price List</a></li>
+        <li><a href="showcase.php">Showcase</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
     </ul>
 </nav>  <!-- end of menu -->
 
 <div id="content">
-
-
-
-
-</div> <!-- #content -->
-<footer>
-    <div>
-        &#169; 2018 Segwyne's Needle
-    </div>
-    <div>
-        Web Design by <a href="saunderstechnology.com">Saunders Technology</a>
-    </div>
-</footer>
-</body>
-</html>
-
 

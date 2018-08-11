@@ -24,5 +24,30 @@
     </ul>
 </nav>  <!-- end of menu -->
 
-<div id="content">
+<div id="content" class="clearfix">
+<div id="article" class="clearfix">
+    <h1>Contact</h1>
+    <p>I would love to hear from you.</p>
+    <form id="contact" method="post" action="contact-thanks.php">
+        Name:<br />
+        <input name="name" type="text" required="required" /><br /><br />
+        Email:<br />
+        <input name="email" type="text" required="required" /><br /><br />
+        Message:<br />
+        <textarea name="comment" rows="5" cols="40" required="required"></textarea><br /><br />
+        <input type="submit" name="send" value="Submit" />  
+    </form>
+</div> <!-- #article -->
+</div> <!-- #content -->
+<footer>
+    <div>
+        &#169; 2018 Segwyne's Needle
+    </div>
+    <div>
+        Web Design by <a href="saunderstechnology.com">Saunders Technology</a>
+    </div>
+</footer>
+</body>
+</html>
+
 
