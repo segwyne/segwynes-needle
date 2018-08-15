@@ -60,7 +60,9 @@ body {
 /*--------------------------------------------------------------
     2.1 Alignments
 --------------------------------------------------------------*/
-
+* {
+    box-sizing: borderbox;
+}
 /*--------------------------------------------------------------
     2.2 Clearings
 --------------------------------------------------------------*/
@@ -255,6 +257,7 @@ h2 {
     }
 p {
     margin: 10px;
+    text-align: center;
     }
 #banner {
     margin: 0;
@@ -277,7 +280,58 @@ p {
 
     6.0 Media
 --------------------------------------------------------------*/
+.slideshow {                            /* Targets the slideshow container -- Might try using flexbox and see what that does */
+    width: 400px;                        /* Sets the slideshow to take up whole screen width */
+    position: relative;                 /* Sets its location in the page */
+    margin: auto;                       /* Centers it? */
+}       
 
+.my-slides img {                        /* Targeting the actual photos themselves */
+    display: block;                     /* Sets the images to wait to be shown */
+    width: 400px;                       /* Sets orientation for vertical photo */
+    height: auto;                      /* Ditto */
+}   
+
+.prev, .next {                          /* Buttons to change the picture in each slideshow */
+    position: absolute;                 /* Anchors them in place */
+    cursor: pointer;                    /* Prevents the cursor from becoming the standard link cursor */
+    top: 50%;                           /* Sets the buttons half-way down the edge of the photo */
+    color: white;                       /* Self-explanatory */
+    font-size: 2em;                     /* Sets size of icon */
+    font-weight: bold;                  /* Sets thickness of icon */
+    border-radius: 0 5px 5px 0;         /* Rounds the outside corners */
+    margin-top: -20px;                  /* Pulls the button up just a bit to counteract height of itself */
+    padding: 15px;                      /* Gives some space between icon and edge of button */
+}
+
+.next {
+    right: 0;                           /* Moves Next button to right side of photo */
+    border-radius: 5px 0 0 5px;         /* Mirrors the rounded corners of the Next button */
+}
+
+.prev:hover, .next:hover {              /* When hovering ... */
+    background-color: rgba(0,0,0,0.75); /* Show a semi-transparent background for the button */
+}
+
+.caption {                              /* Styling the caption text */
+    font-size: 1.2em;                   /* A little bigger than average */
+    color: white;                       /* White letters ... */
+    background-color: rgba(0,0,0,0.6);  /* on a semi-transparent black stripe ... */
+    bottom: 5px;                        /* just a few pixels up from the bottom of the photo */
+    padding: 8px;                       /* Give some space around the caption */
+    text-align: center;                 /* Self-explanatory */
+    width: 100%;                        /* Else the centering is useless and the stripe doesn't happen */
+    position: absolute;                 /* Make sure it sits on the photo and not below it */
+}
+
+.numbertext {                           /* Styling the counter */
+    font-size: 1.2em;                   /* So they are easily seen */
+    color: white;                       /* white letters ... */
+    background-color: rgba(0,0,0,0.6);  /* on a semi-transparent black background */
+    padding: 8px;                       /* Give some space around the counter */
+    position: absolute;                 /* So it sits on the photo and not above it */
+    top: 0;                             /* Make sure they sit at the top */
+}
 /*--------------------------------------------------------------
    ___                             _         
   / _ \___ ___ ___  ___  ___  ___ (_)  _____ 
@@ -311,6 +365,9 @@ p {
     footer > div {
         width: 50%;
     }
+    .my-slides {
+        width: 50%;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -331,6 +388,10 @@ p {
         width: 75%;
         margin: auto;
     }
+    .my-slides {
+        width: 33.33%;
+    }
+
 }
 
 /*--------------------------------------------------------------
@@ -350,6 +411,9 @@ p {
     table {
         width: 50%;
         margin: auto;
+    }
+    .my-slides {
+        width:25%;
     }
 
 }
