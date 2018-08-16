@@ -281,16 +281,34 @@ p {
     6.0 Media
 --------------------------------------------------------------*/
 .slideshow {                            /* Targets the slideshow container -- Might try using flexbox and see what that does */
-    width: 400px;                        /* Sets the slideshow to take up whole screen width */
     position: relative;                 /* Sets its location in the page */
-    margin: auto;                       /* Centers it? */
+    width: 40%;
+    float: left;
 }       
+
+.landscape {
+    width: 640px;
+    height: auto;
+    margin: auto;
+}
+
+.portrait {
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
 
 .my-slides img {                        /* Targeting the actual photos themselves */
     display: block;                     /* Sets the images to wait to be shown */
     width: 400px;                       /* Sets orientation for vertical photo */
-    height: auto;                      /* Ditto */
-}   
+    height: auto;                       /* Ditto */
+}
+
+.my-slides-1 img {                        /* Targeting the actual photos themselves */
+    display: block;                     /* Sets the images to wait to be shown */
+    width: 640px;                       /* Sets orientation for vertical photo */
+    height: auto;                       /* Ditto */
+}
 
 .prev, .next {                          /* Buttons to change the picture in each slideshow */
     position: absolute;                 /* Anchors them in place */
@@ -318,7 +336,7 @@ p {
     color: white;                       /* White letters ... */
     background-color: rgba(0,0,0,0.6);  /* on a semi-transparent black stripe ... */
     bottom: 5px;                        /* just a few pixels up from the bottom of the photo */
-    padding: 8px;                       /* Give some space around the caption */
+    padding: 8px 0;                     /* Give some space above and below the caption */
     text-align: center;                 /* Self-explanatory */
     width: 100%;                        /* Else the centering is useless and the stripe doesn't happen */
     position: absolute;                 /* Make sure it sits on the photo and not below it */
@@ -365,9 +383,6 @@ p {
     footer > div {
         width: 50%;
     }
-    .my-slides {
-        width: 50%;
-    }
 }
 
 /*--------------------------------------------------------------
@@ -388,10 +403,6 @@ p {
         width: 75%;
         margin: auto;
     }
-    .my-slides {
-        width: 33.33%;
-    }
-
 }
 
 /*--------------------------------------------------------------
@@ -412,9 +423,5 @@ p {
         width: 50%;
         margin: auto;
     }
-    .my-slides {
-        width:25%;
-    }
-
 }
 
