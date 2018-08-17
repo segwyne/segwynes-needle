@@ -280,23 +280,41 @@ p {
 
     6.0 Media
 --------------------------------------------------------------*/
+/* Temporarily turning off to try flexbox */
 .slideshow {                            /* Targets the slideshow container -- Might try using flexbox and see what that does */
     position: relative;                 /* Sets its location in the page */
-    width: 40%;
+    width: 49%;                         /* Make it half the width of the screen */
     float: left;
+    margin: auto;
+    border: 1px solid red;
 }       
 
 .landscape {
     width: 640px;
     height: auto;
     margin: auto;
+    border: 1px solid blue;
 }
 
 .portrait {
     width: 400px;
     height: auto;
     margin: auto;
+    border: 1px solid blue;
 }
+
+/******************************************************************
+/* Attempted to use flexbox
+/*.slideshow {
+/*    display: flex;                      /* Let's give it a shot! */
+/*    justify-content: center;
+/*}
+/*
+/*.portrait, .landscape {
+/*    padding: 10px;
+/*    margin: auto;
+/*}
+******************************************************************/
 
 .my-slides img {                        /* Targeting the actual photos themselves */
     display: block;                     /* Sets the images to wait to be shown */
@@ -304,7 +322,7 @@ p {
     height: auto;                       /* Ditto */
 }
 
-.my-slides-1 img {                        /* Targeting the actual photos themselves */
+.my-slides-1 img {                      /* Targeting the actual photos themselves */
     display: block;                     /* Sets the images to wait to be shown */
     width: 640px;                       /* Sets orientation for vertical photo */
     height: auto;                       /* Ditto */
@@ -314,7 +332,7 @@ p {
     position: absolute;                 /* Anchors them in place */
     cursor: pointer;                    /* Prevents the cursor from becoming the standard link cursor */
     top: 50%;                           /* Sets the buttons half-way down the edge of the photo */
-    color: white;                       /* Self-explanatory */
+    color: dodgerblue;                       /* Self-explanatory */
     font-size: 2em;                     /* Sets size of icon */
     font-weight: bold;                  /* Sets thickness of icon */
     border-radius: 0 5px 5px 0;         /* Rounds the outside corners */

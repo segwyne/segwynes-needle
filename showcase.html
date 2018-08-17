@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+  <title>Segwyne's Needle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">  <!-- local style sheet -->
+  <link href="https://fonts.googleapis.com/css?family=Parisienne|Cinzel:bold" rel="stylesheet"> <!-- font -->
+</head>
+<body>
+<header>
+    <h1 id="banner">Segwyne's Needle</h1>
+    <p id="byline"><i>Because adults like to play dress up, too</i></p>
+</header>
+<nav id="menu">  <!-- build my top menu -->
+    <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+    <input type="checkbox" id="tm" style="border: 1px solid red">
+    <ul class="menu" id="main-menu">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="price-list.php">Price List</a></li>
+        <li><a href="showcase.php">Showcase</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+    </ul>
+</nav>  <!-- end of menu -->
+
+<div id="content" class="clearfix">
+
+<div>
+<h1>Showcase</h1>
+<p>Here are some gratuitous photos of fall in my town.</p>
+    <!-- First slideshow -->
+    <div class="portrait slideshow clearfix">
+        <div class="my-slides">
+            <div class="numbertext">1 / 5</div>
+            <img src="slideshow/red-tree-1-tn.jpg" alt="" />
+            <div class="caption">Red tree 1</div>
+        </div>
+        <div class="my-slides">
+            <div class="numbertext">2 / 5</div>
+            <img src="slideshow/red-tree-2-tn.jpg" alt="" />
+            <div class="caption">Red tree 2</div>
+        </div>
+        <div class="my-slides">
+            <div class="numbertext">3 / 5</div>
+            <img src="slideshow/red-tree-3-tn.jpg" alt="" />
+            <div class="caption">Red tree 3</div>
+        </div>
+        <div class="my-slides">
+            <div class="numbertext">4 / 5</div>
+            <img src="slideshow/red-tree-4-tn.jpg" alt="" />
+            <div class="caption">Red tree 4</div>
+        </div>
+        <div class="my-slides">
+            <div class="numbertext">5 / 5</div>
+            <img src="slideshow/red-tree-5-tn.jpg" alt="" />
+            <div class="caption">Red tree 5</div>
+        </div>
+        <a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusDivs(1, 0)">&#10095;</a>
+    </div>  
+
+
+    <!-- Second slideshow -->
+    <div class="landscape slideshow clearfix">
+        <div class="my-slides-1">
+            <div class="numbertext">1 / 5</div>
+            <img src="slideshow/apples-3-tn.jpg" alt="" />
+            <div class="caption">Apple orchard</div>
+        </div>
+        <div class="my-slides-1">
+            <div class="numbertext">2 / 5</div>
+            <img src="slideshow/fall-bog-3-tn.jpg" alt="" />
+            <div class="caption">Bog</div>
+        </div>
+        <div class="my-slides-1">
+            <div class="numbertext">3 / 5</div>
+            <img src="slideshow/fall-intersection-2-tn.jpg" alt="" />
+            <div class="caption">Highway intersection</div>
+        </div>
+        <div class="my-slides-1">
+            <div class="numbertext">4 / 5</div>
+            <img src="slideshow/fall-village-1-tn.jpg" alt="" />
+            <div class="caption">Quaint village</div>
+        </div>
+        <div class="my-slides-1">
+            <div class="numbertext">5 / 5</div>
+            <img src="slideshow/fall-roadside-2-tn.jpg" alt="" />
+            <div class="caption">Roadside</div>
+        </div>
+        <a class="prev" onclick="plusDivs(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusDivs(1, 1)">&#10095;</a>
+    </div>  
+
+<!-- Blatantly copy-and-pasted since I am nowhere near ready to understand JavaScript yet -->
+<script>
+var slideIndex = [1,1];
+var slideId = ["my-slides", "my-slides-1"]
+showDivs(1, 0);
+showDivs(1, 1);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+</div> <!-- #content -->
+<footer>
+    <div>
+        &#169; 2018 Segwyne's Needle
+    </div>
+    <div>
+        Web Design by <a href="http://saunderstechnology.com">Saunders Technology</a>
+    </div>
+</footer>
+</body>
+</html>
+
+
+
