@@ -17,8 +17,9 @@
     <input type="checkbox" id="tm" style="border: 1px solid red">
     <ul class="menu" id="main-menu">
         <li><a href="index.php">Home</a></li>
-        <li><a href="pricelist.php">Price List</a></li>
+        <li><a href="price-list.php">Price List</a></li>
         <li><a href="showcase.php">Showcase</a></li>
+        <li><a href="silliness.php">Silliness</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
     </ul>

@@ -26,18 +26,21 @@
 
 <div id="content" class="clearfix">
 
-<div>
+<div align="center">
 <h1>Practice page</h1>
 <p>Just because I can</p>
+<button type="button" onclick="document.getElementById('roll').style.display = 'block'; document.getElementById('box').style.display = 'none'">Make the photo roll</button>
+<button type="button" onclick="document.getElementById('box').style.display = 'block'; document.getElementById('roll').style.display = 'none'">Make photo go in a square</button>
 </div>
-<div class="roll">
+
+<div id="roll">
 <!-- base image -->
-<img src="profile.jpg" alt="" width="150"/>
+<img src="profile.jpg" alt="" width="100"/>
 </div> <!-- roll -->
 <br /><br />
-<div class="box">
+<div id="box">
 <!-- base image -->
-<img src="profile.jpg" alt="" width="150"/>
+<img src="profile.jpg" alt="" width="100"/>
 </div> <!-- box -->
 
 </div> <!-- #content -->

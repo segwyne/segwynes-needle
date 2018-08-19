@@ -191,31 +191,30 @@ footer a {
 --------------------------------------------------------------*/
 @keyframes rolling {
     0% {transform: rotate(0deg); left: 100px;}
-    50% {transform: rotate(540deg); left: calc(100% - 250px);}
+    50% {transform: rotate(720deg); left: calc(100% - 250px);}
     100% {transform: rotate(0deg); left: 100px;}
 }
-.roll {
-    width: 150px;
+#roll, #box {
+    display: none;
+    width: 100px;
     height: auto;
     position: relative;
-    animation-name: rolling;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+}
+#roll {
+    margin-top: 50px;
+    animation-name: rolling;
 }
 @keyframes box{
-    0%   {left: 100px; top: 0;}
-    25%  {left: calc(100% - 250px); top: 0;}
-    50%  {left: calc(100% - 250px); top: 200px;}
-    75%  {left: 100px; top: 200px;}
-    100% {left: 100px; top: 0;}
+    0%   {left: 50px; top: 0;}
+    25%  {left: calc(100% - 200px); top: 0;}
+    50%  {left: calc(100% - 200px); top: 350px;}
+    75%  {left: 50px; top: 350px;}
+    100% {left: 50px; top: 0;}
 }
-.box {
-    width: 150px;
-    height: auto;
-    position: relative;
+#box {
     animation-name: box;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
     
 /*--------------------------------------------------------------
