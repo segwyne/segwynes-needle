@@ -189,7 +189,35 @@ footer a {
                                                             
     4.0 Module
 --------------------------------------------------------------*/
-
+@keyframes rolling {
+    0% {transform: rotate(0deg); left: 100px;}
+    50% {transform: rotate(540deg); left: calc(100% - 250px);}
+    100% {transform: rotate(0deg); left: 100px;}
+}
+.roll {
+    width: 150px;
+    height: auto;
+    position: relative;
+    animation-name: rolling;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes box{
+    0%   {left: 100px; top: 0;}
+    25%  {left: calc(100% - 250px); top: 0;}
+    50%  {left: calc(100% - 250px); top: 200px;}
+    75%  {left: 100px; top: 200px;}
+    100% {left: 100px; top: 0;}
+}
+.box {
+    width: 150px;
+    height: auto;
+    position: relative;
+    animation-name: box;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+    
 /*--------------------------------------------------------------
     4.1 Tables
 --------------------------------------------------------------*/
