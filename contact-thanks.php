@@ -15,7 +15,7 @@ function test_input($data) {
   
 if (isset($_POST["send"])) {
     $to = 'segwynesneedle@gmail.com';
-    $subject = 'Message from the website';
+    $subject = "Message from the Segwyne's Needle";
     $message = 'Name: ' . $_POST['name'] . "\r\n\r\n";
     $message .= 'Email: ' . $_POST['email'] . "\r\n\r\n";
     $message .= 'Comment: ' . $_POST['comment'];

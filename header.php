@@ -4,7 +4,7 @@
   <title>Segwyne's Needle</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">  <!-- local style sheet -->
+  <link href="style2.css" rel="stylesheet">  <!-- local style sheet -->
   <link href="https://fonts.googleapis.com/css?family=Parisienne|Cinzel:bold" rel="stylesheet"> <!-- font -->
 </head>
 <body>
@@ -14,10 +14,10 @@
 </header>
 <nav id="menu">  <!-- build my top menu -->
     <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
-    <input type="checkbox" id="tm" style="border: 1px solid red">
+    <input type="checkbox" id="tm">
     <ul class="menu" id="main-menu">
         <li><a href="index.php">Home</a></li>
-        <li><a href="pricelist.php">Price List</a></li>
+        <li><a href="https://squareup.com/store/segwynesneedle">Online Store</a></li>
         <li><a href="showcase.php">Showcase</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
@@ -25,4 +25,6 @@
 </nav>  <!-- end of menu -->
 
 <div id="content">
+ 
+  
 

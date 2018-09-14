@@ -54,8 +54,12 @@ d76bc1 is pink background
                     
     2.0 Base
 --------------------------------------------------------------*/
-body {
-    margin:0;
+* {
+  margin: 0;
+}
+
+body, html {
+        height: 100%;
 }
 /*--------------------------------------------------------------
     2.1 Alignments
@@ -63,6 +67,10 @@ body {
 * {
     box-sizing: borderbox;
 }
+.spacer {
+  height: 100px;
+}
+
 /*--------------------------------------------------------------
     2.2 Clearings
 --------------------------------------------------------------*/
@@ -93,12 +101,15 @@ body {
 header {
 	background-color: #d76bc1;
 	text-align: center;
-    height: 75px;
+  height: 75px;
 	}
 
 /*--------------------------------------------------------------
     3.2 Navigation
 --------------------------------------------------------------*/
+nav {
+  height: 40px;
+}
 #toggle-menu {
     display: block;
     background-color: #9649af;
@@ -141,20 +152,20 @@ nav ul li a {
 /*--------------------------------------------------------------
     3.4 Content
 --------------------------------------------------------------*/
+    
+/*--------------------------------------------------------------
+    3.5 Pages
+--------------------------------------------------------------*/
 body {
-    background-color: #eee;
+    background-color: #ddd;
     }
 #content {
-    padding-bottom: 100px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
+    min-height: calc(100% - 310px); /* Keeps footer at the bottom */
 }
 #article {
     padding: 10px;
     text-align: center;
     }
-
-/*--------------------------------------------------------------
-    3.5 Pages
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
     3.6 Sidebars
@@ -164,19 +175,19 @@ body {
     3.7 Footer
 --------------------------------------------------------------*/
 footer {
-	position: fixed; /* Keeps footer at bottom of the page, regardless of height of content */
+	position: relative; /* Keeps footer at bottom of the page, regardless of height of content */
     bottom: 0;
-    width: calc(100% - 20px);
+    width: 100%;
+    height: 40px;
     background-color: #9649af;
-	text-align: center;
+	  text-align: center;
     color: white;
-    padding: 10px;
     display: flex;
     flex-direction: column;
 	}
 footer > div {
     width: 100%;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 footer a {
     color: white;
@@ -189,7 +200,34 @@ footer a {
                                                             
     4.0 Module
 --------------------------------------------------------------*/
-
+@keyframes rolling {
+    0% {transform: rotate(0deg); left: 100px;}
+    50% {transform: rotate(720deg); left: calc(100% - 250px);}
+    100% {transform: rotate(0deg); left: 100px;}
+}
+#roll, #box {
+    display: none;
+    width: 100px;
+    height: auto;
+    position: relative;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#roll {
+    margin-top: 50px;
+    animation-name: rolling;
+}
+@keyframes box{
+    0%   {left: 50px; top: 0;}
+    25%  {left: calc(100% - 200px); top: 0;}
+    50%  {left: calc(100% - 200px); top: 350px;}
+    75%  {left: 50px; top: 350px;}
+    100% {left: 50px; top: 0;}
+}
+#box {
+    animation-name: box;
+}
+    
 /*--------------------------------------------------------------
     4.1 Tables
 --------------------------------------------------------------*/
@@ -280,34 +318,28 @@ p {
 
     6.0 Media
 --------------------------------------------------------------*/
-.slideshow {                            /* Targets the slideshow container -- Might try using flexbox and see what that does */
-    position: relative;                 /* Sets its location in the page */
-    width: 40%;
-    float: left;
-}       
+.container {
+    width: 100%;
+}
 
 .landscape {
-    width: 640px;
-    height: auto;
-    margin: auto;
+    max-width: 640px;                   /* Sets orientation for vertical photo */
+    height: auto;                       /* Ditto */
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid red;
 }
 
 .portrait {
-    width: 400px;
-    height: auto;
-    margin: auto;
+    max-width: 400px;                   /* Sets orientation for vertical photo */
+    height: auto;                       /* Ditto */
+    position: relative;
+    margin: 10px auto;
 }
 
-.my-slides img {                        /* Targeting the actual photos themselves */
-    display: block;                     /* Sets the images to wait to be shown */
-    width: 400px;                       /* Sets orientation for vertical photo */
-    height: auto;                       /* Ditto */
-}
-
-.my-slides-1 img {                        /* Targeting the actual photos themselves */
-    display: block;                     /* Sets the images to wait to be shown */
-    width: 640px;                       /* Sets orientation for vertical photo */
-    height: auto;                       /* Ditto */
+.my-slides, .my-slides-1,
+.my-slides-2, .my-slides-3 {           /* Targeting the actual photos themselves */
+    display: none;                     /* Sets the images to wait to be shown */
 }
 
 .prev, .next {                          /* Buttons to change the picture in each slideshow */
@@ -380,9 +412,6 @@ p {
     footer {
         flex-direction: row;
     }
-    footer > div {
-        width: 50%;
-    }
 }
 
 /*--------------------------------------------------------------
@@ -393,7 +422,7 @@ p {
         font-size: 60px;
     }
     header {
-        height: 125px;
+        height: 130px;
     }
     #article {
         width: 80%;
@@ -409,19 +438,19 @@ p {
     7.3 Large desktop > 1200px
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
-    #banner {
-        font-size: 60px;
-    }
-    header {
-        height: 125px;
-    }
     #article {
         width: 60%;
-        margin: auto;
     } 
     table {
         width: 50%;
         margin: auto;
+    }
+    .container {
+        width: 50%;
+        float: left;
+    }
+    .landscape {
+        margin: 130px auto;
     }
 }
 
