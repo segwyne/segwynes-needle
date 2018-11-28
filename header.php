@@ -4,7 +4,7 @@
   <title>Segwyne's Needle</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style2.css" rel="stylesheet">  <!-- local style sheet -->
+  <link href="style.css" rel="stylesheet">  <!-- local style sheet -->
   <link href="https://fonts.googleapis.com/css?family=Parisienne|Cinzel:bold" rel="stylesheet"> <!-- font -->
 </head>
 <body>
@@ -18,13 +18,14 @@
     <ul class="menu" id="main-menu">
         <li><a href="index.php">Home</a></li>
         <li><a href="https://squareup.com/store/segwynesneedle">Online Store</a></li>
-        <li><a href="showcase.php">Showcase</a></li>
+        <li><a href="portfolio.php">Portfolio</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
     </ul>
 </nav>  <!-- end of menu -->
 
 <div id="content">
- 
-  
+	<article>
+	  
 
