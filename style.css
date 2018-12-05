@@ -57,7 +57,7 @@ body {
     3.1 Header
 --------------------------------------------------------------*/
 
-header {
+#site-header {
 	background: url('images/pink-roses.jpg');
 	text-align: center;
   height: 50px;
@@ -111,7 +111,7 @@ nav ul li a {
 /*--------------------------------------------------------------
     3.4 Content
 --------------------------------------------------------------*/
-article {
+#primary {
 	padding: 25px;
 }
 
@@ -132,7 +132,7 @@ article {
 /*--------------------------------------------------------------
     3.7 Footer
 --------------------------------------------------------------*/
-footer {
+#colophon {
 	position: relative; /* Keeps footer at bottom of the page, regardless of height of content */
   bottom: 0;
   width: 100%;
@@ -143,11 +143,11 @@ footer {
   display: flex;
   flex-direction: column;
 }
-footer > div {
+#colophon > div {
   width: 100%;
   padding: 10px;
 }
-footer a {
+#colophon a {
   color: white;
 }
 /*--------------------------------------------------------------
@@ -277,10 +277,10 @@ p {
   #byline {
     display: inline;  /* Turns on the byline */
   }
-  header {
+  #site-header {
     height: 85px;
   }
-  footer {
+  #colophon {
     flex-direction: row;  /* Switches the footer to horizontal */
   }
   #content {
@@ -295,7 +295,7 @@ p {
   #banner {
     font-size: 60px;
   }
-  header {
+  #site-header {
     height: 130px;
   }
   #content {

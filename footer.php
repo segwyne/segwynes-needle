@@ -1,7 +1,7 @@
 
-	</article>
+	</div> <!-- #primary -->
 </div> <!-- #content -->
-<footer>
+<footer id="colophon">
     <div>
         &#169; 2018 Segwyne's Needle
     </div>

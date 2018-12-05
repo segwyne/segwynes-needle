@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Parisienne|Cinzel:bold" rel="stylesheet"> <!-- font -->
 </head>
 <body>
-<header>
+<header id="site-header">
     <h1 id="banner">Segwyne's Needle</h1>
     <p id="byline"><i>Because adults like to play dress up, too</i></p>
 </header>
@@ -22,10 +22,11 @@
         <li><a href="blog/">Blog</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
+        <li><a href="shop.php">Shop</a></li>
     </ul>
 </nav>  <!-- end of menu -->
 
 <div id="content">
-	<article>
+	<div class="primary">
 	  
 
